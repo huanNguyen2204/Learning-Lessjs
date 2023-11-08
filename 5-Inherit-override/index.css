@@ -1,0 +1,38 @@
+a:focus {
+  outline: thin dotted;
+}
+a:hover {
+  outline: 0 none;
+}
+a:active {
+  outline: 0 none;
+}
+.social {
+  background-color: #e6e6e6;
+  padding: 10px;
+  width: 100%;
+}
+.social ul {
+  text-align: right;
+}
+.social ul li {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+}
+.social ul li a {
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 100%;
+}
+.stuff {
+  color: red;
+}
+.foo,
+.bar {
+  color: red;
+}

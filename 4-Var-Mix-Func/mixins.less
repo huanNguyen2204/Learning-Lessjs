@@ -1,0 +1,90 @@
+.shadow() {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.formfont {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans- serif;
+}
+
+.button {
+  .shadow;
+  .formfont;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5em 2em 0.55em;
+  border-radius: 0.5em;
+}
+
+.shadow() {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.formfont() {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mixin (@a: 0) {
+  border: @a;
+  boxer: @a;
+}
+.unimportant {
+  .mixin(1);
+}
+.important {
+  .mixin(2) !important;
+}
+
+.unimportant {
+  border: 1;
+  boxer: 1;
+}
+.important {
+  border: 2 !important;
+  boxer: 2 !important;
+}
+
+.background (@bkgrd) {
+  background: @bkgrd;
+}
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.box-shadow (@x: 0; @y: 0; @blur: 1px; @color: #000) {
+  -webkit-box-shadow: @x @y @blur @color;
+  -moz-box-shadow: @x @y @blur @color;
+  box-shadow: @x @y @blur @color;
+}
+.formfont() {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// mixins as function()
+.mixin() {
+  @width: 50%;
+  @height: 100px;
+}
+
+.caller() {
+  .mixin();
+  width: @width;
+  height: @height;
+}
+
+// Functions with params
+.average(@a, @b) {
+  @average: ((@a + @b) / 2);
+}
+
+.div {
+  .average(6px, 30px);
+  padding: @average;
+}

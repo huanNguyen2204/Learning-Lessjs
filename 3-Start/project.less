@@ -1,0 +1,62 @@
+@button-color: #4d9298;
+
+input {
+  margin-top: 10px;
+}
+
+#submitbtn {
+  background-color: @button-color;
+  margin-top: 10px;
+  padding: 3px;
+  color: #fff;
+}
+
+.green-gradient {
+  background: #5cb100;
+  background: linear-gradient(to top, #5cb100, #305d00);
+  background: -o-linear-gradient(top, #5cb100, #305d00);
+  background: -webkit-linear-gradient(top, #5cb100, #305d00);
+}
+
+.shape1 {
+  .green-gradient;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#header { color: black; }
+#header .navigation { font-size: 12px; }
+#header .logo { width: 300px; }
+
+// Nested
+#header {
+  color: black;
+  .navigation {
+    font-size: 12px;
+  }
+  .logo {
+    width: 300px;
+  }
+}
+
+// Caculator
+@basic-width: 100px;
+.shape1 {
+  width: @basic-width;
+}
+
+.shape2 {
+  width: @basic-width * 2;
+}
+
+// Extend
+div {
+  background-color: #305d00;
+  height: 100px;
+  width: 100px;
+}
+
+p:extend(div) {
+  color: red;
+}
+
